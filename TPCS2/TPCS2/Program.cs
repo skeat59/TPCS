@@ -10,13 +10,15 @@ namespace TPCS2
     {
         static void Main(string[] args)
         {
-           // HelloWolrd();
-            //Echo();
-            //Console.WriteLine();
-            //Reverse();
-            //Triforce();
-            //QCM("Quelle est la difference entre un pigeon?", "1) les deux pattes, surtout la gauche", "2) Oui", "3) Obiwan Kenobi", "4) La reponse D", 1);
-            Morse();
+           HelloWolrd();
+           Echo();
+           Console.WriteLine();
+           Reverse();
+           Triforce();
+           QCM("Quelle est la difference entre un pigeon?", "1) les deux pattes, surtout la gauche", "2) Oui", "3) Obiwan Kenobi", "4) La reponse D", 1);
+           Morse();
+            
+            MessageMorse();
         }
 
         public static void HelloWolrd()
@@ -125,14 +127,87 @@ namespace TPCS2
             }
         }
 
-        /*static void MessageMorse()
+       
+        static void MessageMorse()
         {
             string[] alphabet = {"._","_...","_._.","_..",".",".._.","__.","....","..",".___","_._","._..","__","_.","___",".__.","__._","._.","...","_",".._","..._",".__","_.._","_.__","__.."};
             string msg = Console.ReadLine();
-            for (int i = 0; i < UPPER; i++)
+            string msgM = " ";
+            for (int i = msg.Length - 1  ; i >= 0; i--)
             {
-                
+                if (msg[i] == 32)
+                {
+                    msgM = msgM + " ";
+                }
+                else
+                {
+
+
+                    if (msg[i] >= 65 && msg[i] <= 90)
+                    {
+                        int nb = msg[i] - 65;
+                        msgM = msgM + " " + alphabet[nb];
+                    }
+                    else
+                    {
+                        int nb = Convert.ToInt32(msg[i]) - 97;
+                        msgM = msgM + " " + alphabet[nb];
+                    }
+                }
             }
-        }*/
+            for (int i = msgM.Length - 1; i > 0; i--)
+            {
+                switch (msgM[i])
+                {
+                    case '_':
+                        Console.Beep(900, 450);
+                        break;
+                    case '.':
+                        Console.Beep(900, 150);
+                        break;
+                    default:
+                        System.Threading.Thread.Sleep(450);
+                        break;
+                }
+            }
+        }
+
+
+        static void MyPoney()
+        {
+
+        }
+               /\ 
+            ( .        )
+        ( (     a       ))
+       /        ._ )       )) 
+     (     . _      j          ))))____________. . ,_        ,+%$% .
+        `''         |                                            `_%* ' " '~%$ .
+                    : .                                           ` .              68%%9
+           _____(                                               ;          C8%%).
+        ."    __       . ______________________.    |_ .          \86'
+        ;   |       :  |                                         "  .     ' .          %
+        ;   |       :  |                                              " .   ?
+         ` . ` :    :  |                                                 :    |  
+            `'    /_|                                                  ;   (
+                 /__|                                                   /.. ..\
+
+
+
+                 /\ 
+            ( .         )
+        ( (     a       ))
+       /        ._ )       )) 
+     (     . _      j          ))))____________. . ,_        ,+%$% .              
+        `''         |                                            `_%* ' " '~%$ .  %$%        %-  
+                    : .                                           ` .              68%%9  68%$%
+           ____ (                                               ;          
+        ."    __ |     . ______________________.    |_ .          
+        ;   |       :  |                                         "  .     ' .        
+        ;   |       :  |                                              " .   ?
+         ` . ` :    :  |                                                 :    |  
+            `'     ;   |                                                   ;   (
+                 /__|                                                   /.. ..\
+                                                                               
     }
 }
