@@ -10,7 +10,7 @@ namespace TPCS2
     {
         static void Main(string[] args)
         {
-            
+
             Console.WriteLine("choisis un exo:");
             Console.WriteLine(" Hello World \n Echo \n Reverse \n Triforce \n Qcm \n Morse \n Message Morse \n Poney \n");
             Console.WriteLine("PS: respect les majuscules");
@@ -45,17 +45,8 @@ namespace TPCS2
                     Console.WriteLine("Cet exercice n'existe pas, desole ");
                     break;
             }
-            /* HelloWolrd();
-             Echo();
-             Console.WriteLine();
-             Reverse();
-             Triforce();
-             QCM("Quelle est la difference entre un pigeon?", "1) les deux pattes, surtout la gauche", "2) Oui", "3) Obiwan Kenobi", "4) La reponse D", 1);
-             Morse();
-            
-              MessageMorse();*/
-            //MyPoney();
-          
+
+
         }
 
         public static void HelloWolrd()
@@ -312,40 +303,6 @@ namespace TPCS2
                     Console.Clear();
                 }
             }
-
-
-
         }
-                                                 
-/*                                   @              @                                                        
-                 @  @    @                      .                                                       
-               @           @ @           ; @    o   @@*@                                                     
-                            @                      #          @                                                         
-                     @                           8              8                                                     
-          8  *        @                          &                  @                                                   
-              @o  #                         @@@8o;;*@@@#                               
-               ;        @                                       @         #                     
-         ;    @     @    8@@@@@@@@@@;    @            o                 
-                   @                    .                                                 8               
-                  @                 @                        @        @        8              
-                         @                  @                  @             #                          
-                 #        @                @     #@.                     @       @             
-                   o                        @              @              @  @       @             
-                     @                                 &                  @                                 
-                                                    @              #o                     .                      
-                                                                 @    @              @ o    @            
-                                                        @        #                          @  &           
-                                                           @                  *                 @        
-                                                                   &      @                                            
-                                                                .              #                                 
-                                                     @                    @    @                                 
-                                                #    *      @                  *                                   
-                                            #          @               #                                              
-                                             *     ##                   o@&                                        
-                                                          &        .@      .* *o ;  *@ */     
-        }
-        
-
     }
 }
-
