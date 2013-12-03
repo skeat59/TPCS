@@ -10,40 +10,42 @@ namespace TPCS2
     {
         static void Main(string[] args)
         {
-
-            Console.WriteLine("choisis un exo:");
-            Console.WriteLine(" Hello World \n Echo \n Reverse \n Triforce \n Qcm \n Morse \n Message Morse \n Poney \n");
-            Console.WriteLine("PS: respect les majuscules");
-            string exo = Console.ReadLine();
-            switch (exo)
+            while (true)
             {
-                case "Hello World":
-                    HelloWolrd();
-                    break;
-                case "Echo":
-                    Echo();
-                    break;
-                case "Reverse":
-                    Reverse();
-                    break;
-                case "Triforce":
-                    Triforce();
-                    break;
-                case "Qcm":
-                    QCM("Quelle est la difference entre un pigeon?", "1) les deux pattes, surtout la gauche", "2) Oui", "3) Obiwan Kenobi", "4) La reponse D", 1);
-                    break;
-                case "Morse":
-                    Morse();
-                    break;
-                case "Message Morse":
-                    MessageMorse();
-                    break;
-                case "Poney":
-                    MyPoney();
-                    break;
-                default:
-                    Console.WriteLine("Cet exercice n'existe pas, desole ");
-                    break;
+                Console.WriteLine("choisis un exo:");
+                Console.WriteLine(" Hello World \n Echo \n Reverse \n Triforce \n Qcm \n Morse \n Message Morse \n Poney \n");
+                string exo = Console.ReadLine();
+                switch (exo.ToLower())
+                {
+                    case "hello world":
+                        HelloWolrd();
+                        break;
+                    case "echo":
+                        Echo();
+                        break;
+                    case "reverse":
+                        Reverse();
+                        break;
+                    case "triforce":
+                        Triforce();
+                        break;
+                    case "qcm":
+                        QCM("Quelle est la difference entre un pigeon?", "1) les deux pattes, surtout la gauche", "2) Oui", "3) Obiwan Kenobi", "4) La reponse D", 1);
+                        break;
+                    case "morse":
+                        Morse();
+                        break;
+                    case "message morse":
+                        MessageMorse();
+                        break;
+                    case "poney":
+                        MyPoney();
+                        break;
+                    default:
+                        Console.WriteLine("Cet exercice n'existe pas, desole ");
+                        break;
+                }
+                Console.WriteLine();
             }
 
 
@@ -142,7 +144,7 @@ namespace TPCS2
         {
             Console.WriteLine("Ecris un message en Morse: \n");
             string msg = Console.ReadLine();
-            for (int i = msg.Length - 1; i > 0; i--)
+            for (int i = 0; i < msg.Length - 1; i++)
             {
                 switch (msg[i])
                 {
@@ -215,45 +217,51 @@ namespace TPCS2
                 if ((i % 2) == 0)
                 {
                     Console.BackgroundColor = ConsoleColor.Blue;
+                    Console.ForegroundColor = ConsoleColor.Yellow;
 
                     Console.WriteLine("                          I AM A                                                                                                                                                                                                                                                  ");
-                    Console.WriteLine("                          #                                                                                                                                                                                                                                                           ");
-                    Console.WriteLine("                         @@  ;                                                                                                                                                                                                                                                    ");
-                    Console.WriteLine("                        @ @&8*                                                                                                                                                                                                                                                ");
-                    Console.WriteLine("                        @ @   #                                                                                                                                                                                                                                                 ");
-                    Console.WriteLine("                      .@ @  8                                                                                                                                                                                                                                                    ");
-                    Console.WriteLine("                      #  @                                                                                                                                                                                                                                                          ");
-                    Console.WriteLine("                       o@                                                                                                                                                                                                                                                           ");
-                    Console.WriteLine("                     @   ;o   @                                                                                                                                                                                                                                                   ");
-                    Console.WriteLine("                       @ @@   @                                                                                                                                                                                                                                               ");
-                    Console.WriteLine("                       ;    @ #  @.                                                                                                                                                                                                                                              ");
-                    Console.WriteLine("                              @       @                                                                                                                                                                                                                                             ");
-                    Console.WriteLine("                     @  @    @                 .                                                                                                                                                                                                                                   ");
-                    Console.WriteLine("                   @     @ @   ; @ o @@*@                                                                                                                                                                                                                              ");
-                    Console.WriteLine("                        @      #    @                                                                                                                                                                                                                                                 ");
-                    Console.WriteLine("                 @       8   8                                                                                                                                                                                                                                                         ");
-                    Console.WriteLine("               8 *     @     &       @                                                                                                                                                                                                                                             ");
-                    Console.WriteLine("              @  #      @@@8o;;* @@#                                                                                                                                                                                                                                  ");
-                    Console.WriteLine("              ;       @        @  #                                                                                                                                                                                                                                                ");
-                    Console.WriteLine("             ;   @   @  8 @@ @; @  o                                                                                                                                                                                                                                    ");
-                    Console.WriteLine("              @       .      8                                                                                                                                                                                                                                                        ");
-                    Console.WriteLine("            @   @ @     @   8                                                                                                                                                                                                                                                 ");
-                    Console.WriteLine("            @   @ @     @   8                                                                                                                                                                                                                                                 ");
-                    Console.WriteLine("                @    @       @  #                                                                                                                                                                                                                                                 ");
-                    Console.WriteLine("              # @      @     #@.  @ @                                                                                                                                                                                                                                       ");
-                    Console.WriteLine("                o@     @      @ @  @                                                                                                                                                                                                                                         ");
-                    Console.WriteLine("                    @     &      @                                                                                                                                                                                                                                                  ");
-                    Console.WriteLine("                              @     #o                 .                                                                                                                                                                                                                               ");
-                    Console.WriteLine("                               @  @  @ o    @                                                                                                                                                                                                                                   ");
-                    Console.WriteLine("                                @   #  @  &                                                                                                                                                                                                                                          ");
-                    Console.WriteLine("                                 @   *  @                                                                                                                                                                                                                                              ");
-                    Console.WriteLine("                                   &  @                                                                                                                                                                                                                                                ");
-                    Console.WriteLine("                                    .    #                                                                                                                                                                                                                                                 ");
-                    Console.WriteLine("                                   @  @  @                                                                                                                                                                                                                                           ");
-                    Console.WriteLine("                               #    *    @           *                                                                                                                                                                                                                                  ");
-                    Console.WriteLine("                             #        @          #                   1                                                                                                                                                                                                                  ");
-                    Console.WriteLine("                             *     ##          o@&                                                                                                                                                                                                                                   ");
-                    Console.WriteLine("                        &   .@    .* *o ; *@                                                                                                                                                                                                                                        ");
+                    Console.WriteLine(@"                                          
+                           .o;.o&&&.      
+                          ;**&*&&&88*     
+                        .o*oo*;oo**88*    
+                        .&oo**.;o***88&o  
+                        o&oo***. ;o*&&&&o 
+                        &8oooo**. .o*o;*& 
+                        &&o;ooooo. .o*. ; 
+                        &&oooooooo. .o*   
+                        &&oo;o###**o;.o   
+                        &&ooooo.&#@&o**   
+                        &8&ooo. &###o*;   
+                        &#&*oo; &@#*o*.   
+                        &88&*oo..8#oooo   
+                        &8#88*oo;;o;o*oo  
+                        &8888&o;;oooooo   
+        .......         &888&ooooo*ooo    
+      ;*8#####&.        8#88&*oo;;;       
+      &&88####8&ooooo; .8##&8&*.          
+     .&&888888#8*o;oo***&##**&o           
+    .*888#&oo&8&;. o**o;o##*o*o           
+   .*888o;.*o*;*; .***o;o&#8ooo           
+   ;88#o.;&&;  *o&8*o*o;o*8#ooo           
+   &8#&.o&8;   **8o***o;o**8ooo           
+  o&88*.*8&    *&&.o*****oo&**            
+  *&&o.o&8;    ooo;;ooooo;oo&o            
+ .*&&.;*8*.    ;*;oooooooo;oo             
+ o*;o.o&8o     .o;o;o****o;o;             
+ ooo;o&88o      ;oo;    ;o;o;             
+ ..*.*8&*.      .oo;    ;o;o;             
+   o;8&&*      .ooo;    ;o;o;             
+   o;&ooo      ;*;o;    ;o;o;             
+   o;*..       ;*;o;    ;o;o;             
+   o;*         ;*;oo    ;o;oo             
+   *o.         ;*;;*.   ;o;;*.            
+   o&.         ;*;;*.   ;o;;*.            
+   .&.         ;*oooo   ;*oooo            
+    ;          .ooooo   .ooooo            
+                                          
+                                          
+                                          
+");    
                     Console.ResetColor();
                     System.Threading.Thread.Sleep(450);
                     Console.Clear();
@@ -262,42 +270,44 @@ namespace TPCS2
                 {
                     Console.BackgroundColor = ConsoleColor.Red;
                     Console.WriteLine("                     PONEY                                                                                                                                                                                                                                                         ");
-                    Console.WriteLine("                          #                                                                                                                                                                                                                                                                 ");
-                    Console.WriteLine("                         @@  ;                PONEY                                                                                                                                                                                                                               ");
-                    Console.WriteLine("                        @ @&8*                                                                                                                                                                                                                                                      ");
-                    Console.WriteLine("                        @ @   #                                                                                                                                                                                                                                                      ");
-                    Console.WriteLine("       poney          .@ @  8                                                                                                                                                                                                                                              ");
-                    Console.WriteLine("                      #  @                                                                                                                                                                                                                                                                   ");
-                    Console.WriteLine("                       o@                                                                                                                                                                                                                                                              ");
-                    Console.WriteLine("                     @   ;o   @                                                                                                                                                                                                                                                        ");
-                    Console.WriteLine("                       @ @@   @                                                                                                                                                                                                                                               ");
-                    Console.WriteLine("                       ;    @ #  @.                                                                                                                                                                                                                                             ");
-                    Console.WriteLine("                              @       @                                                                                                                                                                                                                                                   ");
-                    Console.WriteLine("                     @  @    @                 .                                                                                                                                                                                                                                                  ");
-                    Console.WriteLine("                   @     @ @   ; @ o @@*@                                                                                                                                                                                                                                      ");
-                    Console.WriteLine("                        @      #    @                                                                                                                                                                                                                      ");
-                    Console.WriteLine("                 @       8   8                                                                                                                                                                                                                  ");
-                    Console.WriteLine("               8 *     @     &       @                                                                                                                                                                                                       ");
-                    Console.WriteLine("              @  #      @@@8o;;* @@#                                                                                                                                                                                                  ");
-                    Console.WriteLine("              ;       @        @  #                                                                                                                                                                                                                           ");
-                    Console.WriteLine("             ;   @   @  8 @@ @; @  o                                                                                                                                                                                                                       ");
-                    Console.WriteLine("              @       .      8                                                                                                                                                                                                                    ");
-                    Console.WriteLine("            @   @ @     @   8                                                                                                                                                                                                                   ");
-                    Console.WriteLine("                @    @       @  #                                                                                                                                                                                                                              ");
-                    Console.WriteLine("              # @      @     #@.  @ @                                                                                                                                                                                                                   ");
-                    Console.WriteLine("                o@     @      @ @  @                                                                                                                                                                                                               ");
-                    Console.WriteLine("                    @     &      @                                                                                                                                                                                                       ");
-                    Console.WriteLine("                              @     #o                 .                                                                                                                                                                                                                            ");
-                    Console.WriteLine("                               @  @  @ o    @                                                                                                                                                                                    ");
-                    Console.WriteLine("                                @   #  @  &                                                                                                                                                                                  ");
-                    Console.WriteLine("                                 @   *  @                                                                                                                                                                                                              ");
-                    Console.WriteLine("                                   &  @                                                                                                                                                                                                                                            ");
-                    Console.WriteLine("                                    .    #                                                                                                                                                                                                                                       ");
-                    Console.WriteLine("                                   @  @  @                                                                                                                                                                                                                                       ");
-                    Console.WriteLine("                               #    *    @           *                                                                                                                                                                                                                                 ");
-                    Console.WriteLine("                             #        @          #                                                                                                                                                                                                                     ");
-                    Console.WriteLine("                             *     ##          o@&                                                                                                                                                                                                           ");
-                    Console.WriteLine("                        &   .@    .* *o ; *@                                                                                                                                                                                               ");
+                    Console.WriteLine(@"                              .  ....           
+                            .o*oo&88&o          
+                           .oo*****&88*         
+                          o&o*oo;o***88*.       
+                          o*o*o*..;**&88&o      
+                         .&&o*o**. .o*&*&&o     
+                         ;8&oooo**. .o*..o*     
+                         ;8&oooo;oo. .o*. .     
+                         ;8&oooo**oo...oo       
+                         ;8&oo;*#8#&8*;o;       
+                         ;8&o;oo..&#@&o&;       
+                         ;88*ooo..##&8o*        
+                         ;88&*oo;.8@#ooo.       
+                oooo.    ;8#8&*o;.;*&oo*o.      
+               o*oo**.   ;88#88*;o;;;;oo*.      
+              .*o;;o**   ;88888o;;;ooooo.       
+         ;oooo**oooooo.  ;##88*oo****;;.        
+       .*&####8ooooo;o*. ;##88&**...            
+       ;&&8888&oooooo;*o;o##8*&&o               
+       *&88888*oooooooo**o8##o*&.               
+      *&888&;o*oooo;;;;o*;*##*o*.               
+     o&88* .o&&*ooooooooooo&#8o*.               
+    .&888.;*8&&*oo*&&&&*ooo*88o*.               
+    ;88#o.*8*;&**&&&&&*ooooo*&oo.               
+    &88&;o&&;;&&&&&*ooo;ooo;o&*;                
+   .&&*..*8& ;&&&&*ooooooooo;o**.               
+   **&o.o*8;  o&&&ooo*oooo*oo;o**.              
+   *oo.;*88.  ;&&&o;*&*oooo&*ooooo.             
+   o;*.*88&.   *&*oo**o    ;&**o;o;             
+    ;;;8&&o    *&oo***;    .**&o;o;             
+    ;;o8*&o    **;o***     .***oo*;             
+    ;;o&;o.  .o**o***;     o&&ooo*.             
+    ;;oo     *oo*****      ***oo*o              
+    ;;o.    .*oo****.     ****&*o               
+    ;**      o*oo*;.     ;&**&;;                
+     o*                   o**.                  
+     ;*                                         
+");
                     Console.ResetColor();
                     System.Threading.Thread.Sleep(450);
                     Console.Clear();
